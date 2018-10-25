@@ -89,6 +89,21 @@ const configOptionsUtils = require('../../utils/configOptionsUtils');
        loginUtils.logoutFromAMI();
        cy.wait(100);
     });
+    
+  it('Under any User group uncheck the check-box and click on Apply button',function(){
+    loginUtils.loginToAMI('cypress1');
+
+    changeDropdownUtils.changeWorkspace('Configuration Options');
+  
+    configOptionsUtils.selectTool('User Groups');
+    cy.get(cypressAdmin).click();
+    cy.wait(1000);
+    cy.get('input[type="checkbox"]').uncheck(['28194']); 
+    cy.get(okBtn).click();
+  
+    loginUtils.logoutFromAMI();
+  cy.wait(100);
+  });
     it('TC6-Click on User group gadget to display the Sort-by drop-down items to be sorted',function() {
       loginUtils.loginToAMI('cypress1');
     

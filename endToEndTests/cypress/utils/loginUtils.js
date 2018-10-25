@@ -29,7 +29,7 @@ function loginToAMI(userName) {
     cy.get('#login-password').clear().type(`qcteam{enter}`);
 
     // Confirm that we can now see the workspace dropdown.
-    cy.get('#ACMS-Workspace-Selector-dropdown', {timeout: 90000}).should('exist');
+    cy.get('#ACMS-Workspace-Selector-dropdown', {timeout: 200000}).should('exist');
 }
 
 /**

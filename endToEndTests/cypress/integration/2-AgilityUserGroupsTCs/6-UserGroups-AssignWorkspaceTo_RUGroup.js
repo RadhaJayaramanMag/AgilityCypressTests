@@ -20,6 +20,7 @@ describe('Assign WorkSpace To The Group', function() {
     cy.get('p').should('contain','There are no users under the selected group.');
 
    loginUtils.logoutFromAMI();
+   cy.wait(100);
 });
   it('TC30-Select Uer group with some Users,Click on Assign workspaces to group to display the window with 3 columns -',function(){
 	  // 3 Columns - Workspace, Current Access and New Access.
@@ -39,6 +40,7 @@ describe('Assign WorkSpace To The Group', function() {
                  .should('contain','New Access');
 
        loginUtils.logoutFromAMI();
+       cy.wait(100);
     }); 
 	
 	// TC-31, 32  are unable to automate, as the test cases belongs to DB.
@@ -58,6 +60,7 @@ describe('Assign WorkSpace To The Group', function() {
     cy.get('tr').eq(1).should('contain', '(8/8 users)');
    
      loginUtils.logoutFromAMI();
+     cy.wait(100);
  });
 
   it('TC34-Check the check-box and click on Cancel, Workspace is not available to the Users group',function(){
@@ -76,6 +79,7 @@ describe('Assign WorkSpace To The Group', function() {
     cy.get("#ws-dialog-cancel").click();
    
      loginUtils.logoutFromAMI();
+     cy.wait(100);
  });
   it('TC35-Check the check-box and click on OK, Workspace is available to the Users group',function(){
     const assignUser = 'Assign Workspaces to Group...';

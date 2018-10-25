@@ -10,24 +10,24 @@ describe('Adding User Groups', function () {
     const addBtn = '#ws-dialog-add';
     const UnitTrust = '#ug_2-39304';
 
-    it('TC10- In User group gadget click on Action menu to display the all MenuItems', function () {
-         // Menu items: Add user group, Add root user group, Delete user group, Rename user group, Assign workspaces to group, Copy users, Paste users, Refresh and Help.
-        loginUtils.loginToAMI('cypress1');
+    // it('TC10- In User group gadget click on Action menu to display the all MenuItems', function () {
+    //      // Menu items: Add user group, Add root user group, Delete user group, Rename user group, Assign workspaces to group, Copy users, Paste users, Refresh and Help.
+    //     loginUtils.loginToAMI('cypress1');
 
-        changeDropdownUtils.changeWorkspace('Configuration Options');
-         // Open the UserGroups definition tool.
-        configOptionsUtils.selectTool('User Groups');
-         // Open 'Add Root User Group...'
-        configOptionsUtils.selectToolMenuItem();
+    //     changeDropdownUtils.changeWorkspace('Configuration Options');
+    //      // Open the UserGroups definition tool.
+    //     configOptionsUtils.selectTool('User Groups');
+    //      // Open 'Add Root User Group...'
+    //     configOptionsUtils.selectToolMenuItem();
         
-        cy.get("#conf-atr-def-title").find("li").then(function($VisibleText) { 
-            expect($VisibleText).to.have.lengthOf(14);
-              $VisibleText.each(function(index, $VisibleText) {
-              expect($VisibleText).to.have.text(headerLabels[index]);
-            });
-          });
-        loginUtils.logoutFromAMI();
-    });
+    //     cy.get("#conf-atr-def-title").find("li").then(function($VisibleText) { 
+    //         expect($VisibleText).to.have.lengthOf(14);
+    //           $VisibleText.each(function(index, $VisibleText) {
+    //           expect($VisibleText).to.have.text(headerLabels[index]);
+    //         });
+    //       });
+    //     loginUtils.logoutFromAMI();
+    // });
     it('TC11-click on Add User group to display all the items', function () {
         const addUser = 'Add User Group...';
 

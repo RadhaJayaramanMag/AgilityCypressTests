@@ -1,4 +1,7 @@
 {
     "baseUrl": "http://10.54.3.39/AMI/",
-    "video": false
+    "video": false,
+    "defaultCommandTimeout": 20000,
+"pageLoadTimeout": 2000000
+
 }

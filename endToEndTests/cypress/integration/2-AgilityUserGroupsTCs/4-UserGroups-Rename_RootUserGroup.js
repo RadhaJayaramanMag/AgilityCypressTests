@@ -85,10 +85,11 @@ describe('Rename User Groups', function () {
 
     // Open 'Rename Root User Group...'
     cy.get(UnitTrust).click();
+    cy.wait(1000);
     configOptionsUtils.selectToolMenuItem(renameUser);
     cy.get("#rug-name").clear().type(rename1);
     cy.get(cancelBtn).click();
-
+    
     loginUtils.logoutFromAMI();
     cy.wait(100);
   });
